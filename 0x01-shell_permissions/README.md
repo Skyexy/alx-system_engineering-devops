@@ -1,0 +1,1 @@
+each script help permission
