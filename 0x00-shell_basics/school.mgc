@@ -1,2 +1,2 @@
 #!/bin/bash
-file -m School test.SCHOOL
+file -i -m School test.SCHOOL
