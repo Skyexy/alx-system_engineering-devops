@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
-LIST="$(ls)"
-for i in "$LIST"; do
-	echo $i | cut -d "-" -f2 i
-done
+ls | cut -d "-" -f2
