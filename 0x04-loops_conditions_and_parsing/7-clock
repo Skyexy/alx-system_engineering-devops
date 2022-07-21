@@ -4,7 +4,7 @@ hours=0
 minutes=50
 while (( hours <= 13 )); do
 	if [ $minutes -eq 60 ]; then
-		if [ $hours -ne 12 ]; then
+		if [ $hours -ne 13 ]; then
 			echo "Hour: $hours"
 		fi
 		((minutes=1))
