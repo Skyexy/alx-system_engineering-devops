@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times
+n=0
+while (( n++ < 10 )); do
+	if [ n -eq 9 ]
+	then
+		echo "Hi"
+	else
+		echo "Best School"
+done
