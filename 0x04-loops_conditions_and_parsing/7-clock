@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # script that displays the time for 12 hours and 59 minutes
 hours=0
-minutes=59
+minutes=50
 while (( hours < 13 )); do
 	if [ $minutes -eq 60 ]; then
 		echo "Hour: $hours"
