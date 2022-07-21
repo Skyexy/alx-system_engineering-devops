@@ -7,4 +7,5 @@ while (( n++ < 10 )); do
 		echo "Hi"
 	else
 		echo "Best School"
+	fi
 done
