@@ -22,7 +22,7 @@ int infinite_while(void)
  */
 int main(void)
 {
-	int i = 0; 
+	int i = 0;
 	int process_id;
 
 	while (i < 5)
