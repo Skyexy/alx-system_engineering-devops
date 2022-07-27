@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+n=0
+while (( n++ < 5 )); do
+	if [ $# -eq 0 ]; then
+		ping -c 1 "$@" | grep -c bytes
+	else 
+		echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+done
