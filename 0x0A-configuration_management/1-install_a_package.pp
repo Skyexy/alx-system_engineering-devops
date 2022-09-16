@@ -2,7 +2,8 @@
 
 package { 'flask':
       require  => Package['flask'],
-      ensure   => 'installed'
+      name     => 'flask',
+      ensure   => present
       provider => 'pip3',
       version  => '2.1.0'
 }
