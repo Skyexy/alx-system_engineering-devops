@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# a Bash script that transfers a file from our client to a serve
 _JAIL="$3"
 if [[ -z "$_JAIL" ]];
 then
