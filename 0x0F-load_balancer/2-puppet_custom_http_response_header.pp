@@ -5,7 +5,7 @@ package { 'nginx':
 }
 
 file_line { 'aaaaa':
-  ensure => 'present',
+  ensure => 'absent',
   path   => '/etc/nginx/nginx.conf',
   line   => 'add_header X-Served-By $HOSTNAME;',
 }
