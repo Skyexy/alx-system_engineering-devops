@@ -2,5 +2,5 @@
 # Configure new nginx server to have a custom header
 apt-get -y update
 apt-get install -y nginx
-sed -i '11i\add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf
+sed -i '11i\add_header X-Served-By $HOSTNAME;' /etc/nginx/sites-available/default
 service nginx restart
