@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-su $1 -s /bin/sh -c -c 'whoami'
+sudo su $1 -s /bin/sh -c -c 'whoami'
