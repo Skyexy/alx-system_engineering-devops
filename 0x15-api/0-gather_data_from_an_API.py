@@ -3,7 +3,7 @@ import requests
 import sys
 
 def main():
-    api_url = "https://jsonplaceholder.typicode.com/todos/{}".format(sys.argv[i])
+    api_url = "https://jsonplaceholder.typicode.com/todos/{}".format(sys.argv[2])
     response = requests.get(api_url)
     print("Employee {} is done with tasks({}/{})\n")
     print(response.json())
