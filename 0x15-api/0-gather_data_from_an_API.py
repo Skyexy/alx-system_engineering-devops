@@ -13,7 +13,7 @@ def main():
     task_done = 0
     
     for i in  r.json():
-        if i.get('completed') == "True":
+        if i.get('completed') == True:
             task_done += 1
     print("\nEmployee {} is done with tasks({}/{})\n")
     print(r.json())
