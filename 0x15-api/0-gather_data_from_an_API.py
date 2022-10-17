@@ -16,7 +16,7 @@ def main():
     for i in  r.json():
         if i.get('completed') == True:
             task_done += 1
-            title + "\t {}\n".format(i.get('title'))
+            title += "\t {}\n".format(i.get('title'))
 
     
     print("\nEmployee {} is done with tasks({}/{})\n")
