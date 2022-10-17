@@ -9,7 +9,7 @@ def main():
     
     r = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                      format(sys.argv[1]))
-    total_numof_tax = len(r.json())
+    total_numof_tax = len(r)
     print(total_numof_tax)
     print("\nEmployee {} is done with tasks({}/{})\n")
     print(r.json())
