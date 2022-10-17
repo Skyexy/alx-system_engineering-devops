@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+For a given employee ID, return information about TODO list progress
+"""
 import requests
 import sys
 
