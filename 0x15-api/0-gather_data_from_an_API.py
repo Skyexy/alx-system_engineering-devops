@@ -19,7 +19,7 @@ if __name__ == "__main__":
 		if i.get('completed') == True:
 			task_done += 1
 			
-	sys.stdout.write("Employee {} is done with tasks({}/{}\n):".format(name, task_done, total_numof_task))
+	sys.stdout.write("Employee {} is done with tasks({}/{}):\n".format(name, task_done, total_numof_task))
 	for i in  r.json():
 		if i.get('completed') == True:
 			sys.stdout.write("\t {}\n".format(i.get('title')))
