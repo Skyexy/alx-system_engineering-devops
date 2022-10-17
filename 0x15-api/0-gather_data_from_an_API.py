@@ -9,11 +9,10 @@ def main():
     
     r = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                      format(sys.argv[1]))
-    data = r.json()
-    total_numof_task = len(data)
+    total_numof_task = len(r.json())
     task_done = 0
     
-    for i in data:
+    for i in  r.json():
         if i.get('completed') == "True":
             task_done += 1
     print("\nEmployee {} is done with tasks({}/{})\n")
