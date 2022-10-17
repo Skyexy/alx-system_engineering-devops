@@ -3,23 +3,24 @@
 For a given employee ID, return information about TODO list progress
 """
 
-if __name__ == "__main__":
-	import requests
-	import sys
+if __name__ == '__main__':
+    import requests
+    from sys import argv
 
-	api_url = "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1])
-	response = requests.get(api_url)
-	name = response.json().get('name')
-	r = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
-					 format(sys.argv[1]))
-	total_numof_task = len(r.json())
-	task_done = 0
+    r = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
+                     format(argv[1]))
+    name = r.json().get('name')
 
-	for i in  r.json():
-		if i.get('completed') == True:
-			task_done += 1
-			
-	sys.stdout.write("Employee {} is done with tasks({}/{}):\n".format(name, task_done, total_numof_task))
-	for i in  r.json():
-		if i.get('completed') == True:
-			sys.stdout.write("\t {}\n".format(i.get('title')))
+    r = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
+                     format(argv[1]))
+    data = r.json()
+    done = total = 0
+    for task in data:
+        total += 1
+        if task.get('completed'):
+            done += 1
+
+    print('Employee {} is done with tasks({}/{}):'.format(name, done, total))
+    for task in data:
+        if task.get('completed'):
+            print('\t {}'.format(task.get('title')))
