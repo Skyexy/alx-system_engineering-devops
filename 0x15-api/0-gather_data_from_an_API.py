@@ -19,8 +19,6 @@ def main():
             title += "\t {}\n".format(i.get('title'))
 
     
-    print("\nEmployee {} is done with tasks({}/{})\n")
-    print(title)
-    print(task_done)
+    print("\nEmployee {} is done with tasks({}/{})\n{}".format(name, task_done, total_numof_task, title))
 if __name__ == "__main__":
     main()
