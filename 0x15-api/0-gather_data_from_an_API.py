@@ -13,18 +13,15 @@ def main():
 					 format(sys.argv[1]))
 	total_numof_task = len(r.json())
 	task_done = 0
-	title = ""
 
 	for i in  r.json():
 		if i.get('completed') == True:
 			task_done += 1
-			title += "\n\t {}".format(i.get('title'))
 			
 	print("Employee {} is done with tasks({}/{}):".format(name, task_done, total_numof_task))
 	for i in  r.json():
 		if i.get('completed') == True:
 			print("\t {}".format(i.get('title')))
-	print(title)
 
 if __name__ == "__main__":
 	main()
