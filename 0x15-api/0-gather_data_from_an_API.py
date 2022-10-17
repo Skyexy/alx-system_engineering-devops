@@ -21,7 +21,9 @@ def main():
 			title += "\n\t {}".format(i.get('title'))
 			
 	print("Employee {} is done with tasks({}/{}):".format(name, task_done, total_numof_task))
-	
+	for i in  r.json():
+		if i.get('completed') == True:
+			print("\t {}".format(i.get('title')))
 	print(title)
 
 if __name__ == "__main__":
