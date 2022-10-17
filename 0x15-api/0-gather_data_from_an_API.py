@@ -9,9 +9,15 @@ def main():
     
     r = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                      format(sys.argv[1]))
-    total_numof_tax = len(r.json())
-    print(total_numof_tax)
+    data = r.json()
+    total_numof_task = len(data)
+    task_done = 0
+    
+    for i in data:
+        if i.get('completed') === TRUE:
+            task_done += 1
     print("\nEmployee {} is done with tasks({}/{})\n")
     print(r.json())
+    print(task_done)
 if __name__ == "__main__":
     main()
