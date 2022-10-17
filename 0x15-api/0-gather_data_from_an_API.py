@@ -8,7 +8,7 @@ def main():
     name = response.json().get('name')
     
     r = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
-                     format(argv[1]))
+                     format(sys.argv[1]))
     
     print("Employee {} is done with tasks({}/{})\n")
     print(r.json())
