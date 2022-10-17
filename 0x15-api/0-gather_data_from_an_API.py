@@ -2,10 +2,11 @@
 """
 For a given employee ID, return information about TODO list progress
 """
-import requests
-import sys
 
-def main():
+if __name__ == "__main__":
+	import requests
+	import sys
+
 	api_url = "https://jsonplaceholder.typicode.com/users/{}".format(sys.argv[1])
 	response = requests.get(api_url)
 	name = response.json().get('name')
@@ -18,10 +19,7 @@ def main():
 		if i.get('completed') == True:
 			task_done += 1
 			
-	print("Employee {} is done with tasks({}/{}):".format(name, task_done, total_numof_task))
+	sys.stdout.write("Employee {} is done with tasks({}/{}):".format(name, task_done, total_numof_task))
 	for i in  r.json():
 		if i.get('completed') == True:
-			print("\t {}".format(i.get('title')))
-
-if __name__ == "__main__":
-	main()
+			sys.stdout.write("\t {}".format(i.get('title')))
