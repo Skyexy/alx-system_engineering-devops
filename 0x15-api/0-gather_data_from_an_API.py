@@ -22,4 +22,4 @@ if __name__ == "__main__":
 	sys.stdout.write("Employee {} is done with tasks({}/{}):".format(name, task_done, total_numof_task))
 	for i in  r.json():
 		if i.get('completed') == True:
-			sys.stdout.write("\t {}".format(i.get('title')))
+			sys.stdout.write("\n\t {}".format(i.get('title')))
