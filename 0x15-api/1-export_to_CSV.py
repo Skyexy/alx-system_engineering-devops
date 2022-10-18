@@ -11,13 +11,14 @@ if __name__ == '__main__':
                      format(argv[1]))
     name = r.json().get('username')
     
-    res = requests.get('https://jsonplaceholder.typicode.com/todos/{}'.
+    res = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
                      format(argv[1]))
     filemane = "{}.csv".format(argv[1])
     long = []
-    for i in res.json():
-        title = i.get('title')
-        bool = i.get('completed"')
+    
+    for lop in res.json():
+        title = lop.get('title')
+        bool = lop.get('completed"')
         subject = ["{}".format(argv[1]),"{}".format(name),"{}".format(bool),"{}".format(title)]
         long.append(subject)
         
