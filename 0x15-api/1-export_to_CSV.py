@@ -18,8 +18,7 @@ if __name__ == '__main__':
     
     for lop in res.json():
         title = lop.get('title')
-        bool = lop.get('completed"')
-        subject = ["{}".format(argv[1]),"{}".format(name),"{}".format(bool),"{}".format(title)]
+        subject = "{}".format(argv[1]),"{}".format(name),"{}".format(lop.get('completed"')),"{}".format(title)
         with open("{}.csv".format(argv[1]), 'a') as file:
             writer = csv.writer(file)
             writer.writerow(subject)
