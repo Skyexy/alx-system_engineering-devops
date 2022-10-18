@@ -6,6 +6,7 @@ For a given employee ID, return information about TODO list progress
 if __name__ == '__main__':
     import requests
     from sys import argv
+    import csv
 
     r = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
                      format(argv[1]))
