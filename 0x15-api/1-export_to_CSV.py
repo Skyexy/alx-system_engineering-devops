@@ -20,6 +20,6 @@ if __name__ == '__main__':
         title = lop.get('title')
         bool = lop.get('completed"')
         subject = ["{}".format(argv[1]),"{}".format(name),"{}".format(bool),"{}".format(title)]
-        with open("{}.csv".format(argv[1]), 'w') as file:
+        with open("{}.csv".format(argv[1]), 'wa') as file:
             writer = csv.writer(file)
             writer.writerow(subject)
