@@ -13,7 +13,7 @@ if __name__ == '__main__':
     
     res = requests.get('https://jsonplaceholder.typicode.com/todos/{}'.
                      format(argv[1]))
-    filemane = argv[1].csv
+    filemane = "{}.csv".format(argv[1])
     long = []
     for i in res.json():
         title = i.get('title')
@@ -23,4 +23,4 @@ if __name__ == '__main__':
         
     with open(filename, 'w') as file:
         writer = csv.writer(file)
-        writer.writerow(subject)
+        writer.writerow(long)
