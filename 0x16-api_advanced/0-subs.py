@@ -4,4 +4,9 @@ queries the Reddit API and returns the number of subscribers
 """
 
 def number_of_subscribers(subreddit):
-  res = requests.get("https://oauth.reddit.com/r/programming/about")
+    try:
+        base_ulr = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+        res = requests.get(base_ulr, headers = {'User-agent': 'yourbot'})
+        return (res.json()['data']['subscribers'])
+    except:
+        return (0)
