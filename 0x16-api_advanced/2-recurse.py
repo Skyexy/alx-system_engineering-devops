@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import requests
 """
 queries the Reddit API and returns the number of subscribers
 """
+import requests
 
 def recurse(subreddit, hot_list=[], after=''):
     try:
