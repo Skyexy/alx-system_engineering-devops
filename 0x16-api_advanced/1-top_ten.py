@@ -2,6 +2,7 @@
 """
 queries the Reddit API and prints the titles
 """
+import requests
 
 def def top_ten(subreddit):
     try:
