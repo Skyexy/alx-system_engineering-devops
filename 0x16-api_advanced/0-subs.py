@@ -1,13 +1,16 @@
 #!/usr/bin/python3
 """
-queries the Reddit API and returns the number of subscribers
+Query the Reddit API and return the number of subscribers for a given subreddit
 """
 import requests
 
+
 def number_of_subscribers(subreddit):
     try:
-        base_ulr = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-        res = requests.get(base_ulr, headers = {'User-agent': 'custom'}, allow_redirects=False)
-        return (res.json()['data']['subscribers'])
+        r = requests.get('https://www.reddit.com/r/{}/about.json'.
+                         format(subreddit),
+                         headers={'User-Agent': 'custom'},
+                         allow_redirects=False)
+        return r.json().get('data').get('subscribers')
     except:
-        return (0)
+        return 0
